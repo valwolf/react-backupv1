@@ -19,26 +19,20 @@ const template = (
 </div>
 );
 
-const user = {
-    name:"Valentin",
-    age:17,
-    location:"Zagreb"
-};
-function getLoc(location) {
-    if(location){
-        return <p>Location: {user.location}</p>;
-    }
-    return undefined;
-};
+let count = 0;
+const addOne = () => console.log('plus one');
+const minusOne = () => console.log('minus one');
+const setupReset = () => console.log('reset');
 
 const templateTwo = (
-<div>
-    <h1>{user.name ? user.name : 'Anonymous'}</h1>
-    {(user.age && user.age>=18) && <p>Age: {user.age}</p>}
-    {getLoc(user.location)}
-</div>
+    <div>
+        <h1>Count: {count}</h1>
+        <button onClick = {addOne}>+1</button>
+        <button onClick = {minusOne}>-1</button>
+        <button onClick = {setupReset}>Reset</button>
+    </div>
 );
 
 const appRoot=document.getElementById("app");
 
-ReactDOM.render(template,appRoot);
+ReactDOM.render(templateTwo,appRoot);
