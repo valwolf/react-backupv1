@@ -1,0 +1,39 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add babel-preset-react@6.24.1 bable-preset-env@1.5.2
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.11.1
+
+Platform: 
+  linux x64
+
+npm manifest: 
+  {
+    "name": "indecision-app",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Valentin Vuk",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find package "bable-preset-env" on the "npm" registry.
+      at new MessageError (/usr/share/yarn/lib/cli.js:186:110)
+      at NpmResolver.<anonymous> (/usr/share/yarn/lib/cli.js:51625:15)
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:98:30)
+      at /usr/share/yarn/lib/cli.js:109:13
+      at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:182:7)
