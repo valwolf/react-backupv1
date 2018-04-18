@@ -25,6 +25,12 @@ const deleteOptions = () => {
     }; 
 };
 
+const onMakeDecision = () => {
+    const numRan = Math.floor(app.options.length * Math.random());
+    const option = app.options[numRan];
+    alert(option);
+};
+
 const appRoot=document.getElementById("app");
 
 const renderIndecisionApp = () => {
@@ -33,7 +39,7 @@ const renderIndecisionApp = () => {
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}
         <p>{app.options.length > 0 ? 'Here are your options' : 'No options'}</p>
-        <p>{app.options.length}</p>
+        <button disabled={app.options.length == 0} onClick={onMakeDecision}>What should I do?</button>
         <button onClick={deleteOptions}>Remove All</button>
         <ol>
         {
